@@ -102,7 +102,7 @@ namespace MvvmBlazor.Components
         protected virtual void Dispose(bool disposing)
         {
             if (disposing)
-                if (_bindings is not null!)
+                if (_bindings is not null)
                 {
                     DisposeBindings();
 
@@ -120,7 +120,7 @@ namespace MvvmBlazor.Components
 
         protected virtual ValueTask DisposeAsyncCore()
         {
-            if (_bindings is not null!)
+            if (_bindings is not null)
             {
                 DisposeBindings();
                 _bindings = null!;
